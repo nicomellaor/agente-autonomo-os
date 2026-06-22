@@ -7,8 +7,10 @@ from rich.prompt import Prompt
 from rich.traceback import install
 from modelo import inferir, entrenar, cargar_modelo, RUTA_MODELO, UMBRAL_CONFIANZA
 from controlador import ejecutar_accion
+from dotenv import load_dotenv
 
 
+load_dotenv()
 install()
 console = Console()
 
@@ -45,6 +47,7 @@ def bucle_interactivo(modelo, tokenizador):
 
         if texto.lower() == "salir":
             console.print("   [green][AGENTE][/green]: ¡Hasta luego!")
+            console.rule(style="dim")
             break
 
         accion, confianza = inferir(modelo, tokenizador, texto)

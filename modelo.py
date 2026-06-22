@@ -6,7 +6,7 @@ import torch
 from torch.optim import AdamW
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
  
-MODELO_BASE = "dccuchile/bert-base-spanish-wwm-uncased"
+MODELO_BASE = "dccuchile/bert-base-spanish-wwm-uncased" # 1024 dimensiones, 12 capas, 110M parámetros
 RUTA_MODELO = "agente_os_model"
 UMBRAL_CONFIANZA = 45.0
 EPOCHS = 10

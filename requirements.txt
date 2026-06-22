@@ -93,6 +93,7 @@ Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1774796700
 pyparsing==3.3.2
 PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1733217236728/work
 python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+python-dotenv==1.2.2
 PyYAML @ file:///home/conda/feedstock_root/build_artifacts/pyyaml_1770223234623/work
 pyzmq @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pyzmq_1771716952/work
 regex==2026.5.9
