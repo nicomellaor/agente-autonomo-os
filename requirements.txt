@@ -16,11 +16,13 @@ cuda-toolkit==13.0.2
 cycler==0.12.1
 debugpy @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_debugpy_1769744974/work
 decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1740384970518/work
+et_xmlfile==2.0.0
 exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1763918002538/work
 executing @ file:///home/conda/feedstock_root/build_artifacts/executing_1756729339227/work
 filelock @ file:///home/conda/feedstock_root/build_artifacts/filelock_1776210360351/work
 flatbuffers==25.12.19
 fonttools==4.62.1
+fpdf==1.7.2
 fsspec==2026.6.0
 gast==0.7.0
 gmpy2 @ file:///home/conda/feedstock_root/build_artifacts/gmpy2_1773244929835/work
@@ -49,6 +51,7 @@ kagglesdk==0.1.18
 keras==3.12.1
 kiwisolver==1.5.0
 libclang==18.1.1
+lxml==6.1.1
 markdown-it-py==4.0.0
 MarkupSafe @ file:///home/conda/feedstock_root/build_artifacts/markupsafe_1772444934960/work
 matplotlib==3.10.8
@@ -75,6 +78,7 @@ nvidia-nccl-cu13==2.29.7
 nvidia-nvjitlink==13.0.88
 nvidia-nvshmem-cu13==3.4.5
 nvidia-nvtx==13.0.85
+openpyxl==3.1.5
 opt_einsum==3.4.0
 optree==0.19.0
 packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1776209387/work
@@ -93,6 +97,7 @@ Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1774796700
 pyparsing==3.3.2
 PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1733217236728/work
 python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+python-docx==1.2.0
 python-dotenv==1.2.2
 PyYAML @ file:///home/conda/feedstock_root/build_artifacts/pyyaml_1770223234623/work
 pyzmq @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pyzmq_1771716952/work

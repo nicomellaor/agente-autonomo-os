@@ -9,7 +9,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 MODELO_BASE = "dccuchile/bert-base-spanish-wwm-uncased" # 1024 dimensiones, 12 capas, 110M parámetros
 RUTA_MODELO = "agente_os_model"
 UMBRAL_CONFIANZA = 45.0
-EPOCHS = 10
+EPOCHS = 15
 
 ACCIONES = [
     "REPORTE_DIA",      # 0
@@ -26,8 +26,8 @@ DATASET_ENTRENAMIENTO = [
     ("dame el reporte del día", 0),
     ("cuáles son las noticias de hoy", 0),
     ("qué pasó hoy en el mundo", 0),
-    ("dame un resumen de las noticias", 0),
-    ("hay novedades hoy", 0),
+    ("dame un resumen del día", 0),
+    ("qué novedades hay hoy", 0),
     ("qué temperatura hace afuera", 0),
 
     # REVISAR_CORREOS (1)
@@ -41,34 +41,34 @@ DATASET_ENTRENAMIENTO = [
     ("qué dice mi correo hoy", 1),
 
     # GENERAR_ARCHIVO (2)
-    ("crea un archivo de texto", 2),
-    ("genera un reporte en txt", 2),
-    ("escribe un documento con el resumen", 2),
-    ("genera el informe de ventas", 2),
-    ("crea un archivo libre office", 2),
-    ("necesito un documento con los datos", 2),
-    ("exporta el reporte a archivo", 2),
-    ("guarda esto en un documento", 2),
+    ("crea un archivo llamado informe.txt con el texto resumen diario", 2),
+    ("genera un documento pdf con el contenido ventas de junio", 2),
+    ("haz un archivo md que diga notas de la reunión", 2),
+    ("crea un csv con el texto nombre,correo,estado", 2),
+    ("genera un docx con el mensaje acta de seguimiento", 2),
+    ("haz un xlsx con los datos producto,cantidad,precio", 2),
+    ("guarda un archivo de texto con el contenido pendiente por revisar", 2),
+    ("crea el archivo resumen_final.md con el texto conclusiones del proyecto", 2),
 
     # ABRIR_ARCHIVO (3)
-    ("abre el archivo presupuesto", 3),
-    ("abrir documento contratos", 3),
-    ("muéstrame el archivo de logs", 3),
-    ("abre el pdf del informe", 3),
-    ("quiero ver el archivo de configuración", 3),
-    ("carga el documento de ventas", 3),
-    ("abre el excel de este mes", 3),
-    ("muéstrame el archivo notas.txt", 3),
+    ("abre el archivo informe.txt", 3),
+    ("quiero abrir el documento /home/nico/Downloads/contrato.pdf", 3),
+    ("muéstrame el archivo notas.md", 3),
+    ("abre el pdf llamado reporte_final.pdf", 3),
+    ("quiero ver el archivo config.yaml", 3),
+    ("carga el documento ventas.xlsx", 3),
+    ("abre el archivo de logs sistema.log", 3),
+    ("muéstrame el archivo presupuesto_2026.csv", 3),
     
     # EJECUTAR_PROGRAMA (4)
-    ("ejecuta el script de backup", 4),
-    ("lanza el programa de facturación", 4),
-    ("corre el script de limpieza", 4),
-    ("inicia la aplicación de monitoreo", 4),
-    ("ejecuta el proceso de sincronización", 4),
-    ("lanza el programa", 4),
-    ("corre el script python", 4),
-    ("inicia el servidor local", 4),
+    ("abre firefox", 4),
+    ("ejecuta vscode", 4),
+    ("lanza chromium", 4),
+    ("abre gimp", 4),
+    ("inicia libreoffice", 4),
+    ("ejecuta la calculadora", 4),
+    ("corre el terminal", 4),
+    ("abre el navegador de archivos", 4),
 ]
 
 tokenizador = AutoTokenizer.from_pretrained(MODELO_BASE)
