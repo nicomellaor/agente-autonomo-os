@@ -94,4 +94,4 @@ def generar_archivo(contexto: str, contenido: str = "") -> None:
             pdf.cell(0, 10, linea, ln=True)
         pdf.output(ruta)
 
-    print(f"Archivo generado: {ruta}")
+    print(f"\nArchivo generado: {ruta}")

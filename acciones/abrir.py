@@ -1,5 +1,6 @@
 import os
 import subprocess
+import re
 
 
 DIRECTORIOS_BUSQUEDA = [
@@ -11,10 +12,16 @@ DIRECTORIOS_BUSQUEDA = [
 
 
 def extraer_nombre_archivo(contexto: str) -> str:
-    tokens = contexto.split()
-    for token in tokens:
-        if "." in token:
-            return token
+    # Nombre entre comillas
+    match = re.search(r'["\']([^"\']+\.\w+)["\']', contexto)
+    if match:
+        return match.group(1)
+
+    # Nombre con extensión sin comillas
+    match = re.search(r'\b([\w\-]+\.\w+)\b', contexto)
+    if match:
+        return match.group(1)
+
     return ""
 
 
@@ -36,12 +43,12 @@ def buscar_archivo(nombre_archivo: str) -> str:
 def abrir_archivo(contexto: str) -> None:
     nombre_archivo = extraer_nombre_archivo(contexto)
     if not nombre_archivo:
-        print("No se detectó ningún archivo en el contexto.")
+        print("\nNo se detectó ningún archivo en el contexto.")
         return
 
     ruta_archivo = buscar_archivo(nombre_archivo)
     if ruta_archivo:
-        print(f"Abriendo el archivo: {ruta_archivo}")
+        print(f"\nAbriendo el archivo: {ruta_archivo}")
         subprocess.Popen(["xdg-open", ruta_archivo], start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     else:
-        print(f"No se encontró el archivo: {nombre_archivo}")
+        print(f"\nNo se encontró el archivo: {nombre_archivo}")

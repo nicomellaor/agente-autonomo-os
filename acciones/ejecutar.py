@@ -29,11 +29,11 @@ def ejecutar_programa(contexto: str) -> None:
     programa = extraer_programa(contexto)
     ruta = PROGRAMAS_PERMITIDOS.get(programa)
     if not ruta:
-        print(f"Programa no permitido: {programa}")
+        print(f"\nPrograma no permitido: {programa}")
     if not shutil.which(ruta):
-        print(f"Programa no encontrado en el sistema: {ruta}")    
+        print(f"\nPrograma no encontrado en el sistema: {ruta}")    
     try:
         subprocess.Popen([ruta], start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        print(f"Ejecutando el programa: {programa}")
+        print(f"\nEjecutando el programa: {programa}")
     except Exception as e:
-        print(f"No se pudo ejecutar el programa: {e}")
+        print(f"\nNo se pudo ejecutar el programa: {e}")

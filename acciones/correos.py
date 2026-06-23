@@ -33,7 +33,7 @@ def revisar_correos(contexto: str, cantidad: int = 5) -> None:
         for uid in reversed(ids):
             _, data = imap.fetch(uid, "(RFC822)")
             msg = email.message_from_bytes(data[0][1])
-            print(f"De: {decodificar_campo(msg['From'])}")
+            print(f"\nDe: {decodificar_campo(msg['From'])}")
             print(f"Asunto: {decodificar_campo(msg['Subject'])}")
             print(f"Fecha: {msg['Date']}")
             print("-" * 40)
