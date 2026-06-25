@@ -31,6 +31,8 @@ DATASET_ENTRENAMIENTO = [
     ("qué temperatura hace afuera", 0),
     ("oye, por favor, me podrias decir el clima de hoy", 0),
     ("iba a revisar el correo pero mejor dame el reporte del día", 0),
+    ("pensaba abrir firefox pero mejor dame el clima de hoy", 0),
+    ("iba a crear un archivo pero necesito saber las noticias de hoy", 0),
 
     # REVISAR_CORREOS (1)
     ("revisa mi correo", 1),
@@ -43,6 +45,8 @@ DATASET_ENTRENAMIENTO = [
     ("qué dice mi correo hoy", 1),
     ("hola, necesito que revises mis correos electrónicos", 1),
     ("crea un archivo, pero mejor revisa si hay correos nuevos", 1),
+    ("quería ver el reporte pero mejor revisa mis correos", 1),
+    ("abre el archivo, no espera, chequea si tengo emails nuevos", 1),
 
     # GENERAR_ARCHIVO (2)
     ("crea un archivo llamado informe.txt con el texto resumen diario", 2),
@@ -54,7 +58,9 @@ DATASET_ENTRENAMIENTO = [
     ("guarda un archivo de texto con el contenido pendiente por revisar", 2),
     ("crea el archivo resumen_final.md con el texto conclusiones del proyecto", 2),
     ("bueno, quiero que generes un archivo llamado resultados.csv con el contenido: tabla de datos", 2),
-    ("quiero abrir la terminal, pero prefiero que generes un archivo con el texto: lista de tareas", 2),
+    ("pensé en abrir la terminal pero mejor crea un archivo llamado tareas.txt", 2),
+    ("iba a abrir el navegador pero mejor genera un informe.txt con el texto resumen", 2),
+    ("pensé en revisar correos pero crea un csv con nombre,edad,cargo", 2),
 
     # ABRIR_ARCHIVO (3)
     ("abre el archivo informe.txt", 3),
@@ -66,7 +72,9 @@ DATASET_ENTRENAMIENTO = [
     ("abre el archivo de logs sistema.log", 3),
     ("muéstrame el archivo presupuesto_2026.csv", 3),
     ("podrías abrir el archivo llamado acta_reunion.docx", 3),
-    ("abre firefox, no mejor abre el archivo llamado resumen.txt", 3),
+    ("quería ejecutar firefox pero mejor muéstrame el archivo resumen.txt", 3),
+    ("iba a ejecutar vscode pero mejor abre el archivo proyecto.md", 3),
+    ("quería el reporte del día pero mejor muéstrame el archivo logs.txt", 3),
     
     # EJECUTAR_PROGRAMA (4)
     ("abre firefox", 4),
@@ -79,6 +87,8 @@ DATASET_ENTRENAMIENTO = [
     ("abre el navegador de archivos", 4),
     ("hola por favor necesito que ahora mismo abras el editor de texto", 4),
     ("quiero el resumen del día, pero abre el navegador en su lugar", 4),
+    ("pensaba abrir un archivo pero mejor lanza firefox", 4),
+    ("iba a revisar correos pero mejor abre la calculadora", 4),
 ]
 
 tokenizador = AutoTokenizer.from_pretrained(MODELO_BASE)

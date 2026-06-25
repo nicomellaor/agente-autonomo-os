@@ -27,7 +27,7 @@ def revisar_correos(contexto: str, cantidad: int = 5) -> None:
         ids = mensajes[0].split()[-cantidad:]
 
         if not ids:
-            print("No hay correos nuevos sin leer.")
+            print("\nNo hay correos nuevos sin leer.")
             return
         
         for uid in reversed(ids):
